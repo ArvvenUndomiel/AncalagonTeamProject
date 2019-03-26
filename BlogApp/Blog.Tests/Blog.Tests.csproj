@@ -14,11 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\CreatePage\" />
-    <Folder Include="Pages\DeletePage\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Jsons\RegValidUser.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

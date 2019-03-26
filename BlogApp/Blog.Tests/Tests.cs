@@ -2,8 +2,14 @@
 {
     using Blog.Tests.HelperFiles;
     using Blog.Tests.Models;
+    using Blog.Tests.Pages.AccountPage;
+    using Blog.Tests.Pages.BlogPage;
+    using Blog.Tests.Pages.CreatePage;
+    using Blog.Tests.Pages.DeletePage;
+    using Blog.Tests.Pages.EditPage;
     using Blog.Tests.Pages.HomePage;
     using Blog.Tests.Pages.LogInPage;
+    using Blog.Tests.Pages.PasswordPage;
     using Blog.Tests.Pages.RegisterPage;
     using Newtonsoft.Json;
     using NUnit.Framework;
@@ -22,6 +28,12 @@
         private HomePage HomePage;
         private RegisterPage RegisterPage;
         private LogInPage LogInPage;
+        private CreatePage CreatePage;
+        private AccountPage AccountPage;
+        private PasswordPage PasswordPage;
+        private BlogPage BlogPage;
+        private DeletePage DeletePage;
+        private EditPage EditPage;
 
 
         [SetUp]
@@ -33,6 +45,12 @@
             HomePage = new HomePage(driver);
             RegisterPage = new RegisterPage(driver);
             LogInPage = new LogInPage(driver);
+            CreatePage = new CreatePage(driver);
+            AccountPage = new AccountPage(driver);
+            PasswordPage = new PasswordPage(driver);
+            BlogPage = new BlogPage(driver);
+            DeletePage = new DeletePage(driver);
+            EditPage = new EditPage(driver);
         }
 
         [TearDown]
@@ -55,5 +73,23 @@
 
             //Write Asserts...
         }
+
+        //[Test]
+        //public void SampleSignInTest()
+        //{
+        //    //Read user from json file and convert to user object
+        //    var dt = DateTime.UtcNow;
+        //    var email = $"johnDoe{new TimeSpan(dt.Hour, dt.Minute, dt.Second).TotalMilliseconds}@mysite.com";
+        //    var validRegisteredUser = FileReader.GetFileContent("ValidRegisteredUser.json", "Jsons");
+        //    var ValidRegisteredUser = JsonConvert.DeserializeObject<RegistrationUser>(validRegisteredUser);
+        //    ValidRegisteredUser.Email = email;
+        //    //Set up Register page and fill the form with the user's data
+        //    RegisterPage.Navigate();
+        //    RegisterPage.FillRegistrationForm(ValidRegisteredUser);
+        //    Thread.Sleep(2000);
+        //
+        //    //Write Asserts...
+        //}
+        //
     }
 }
